@@ -26,8 +26,8 @@ Download the library itself from GitHub, open your project, drop it into the fol
 #include "KirNovEngine.h"
 
 int main() {
-keng_init("My Game");
-return 0;
+    keng_init("My Game");
+    return 0;
 }
 ```
 ## How do you actually program in it?
