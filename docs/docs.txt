@@ -1,0 +1,40 @@
+KirNovEngine v1.0 - Documentation (EN)
+Developer: Kirillovo Company (Kirill Ludzyan)
+
+DESCRIPTION
+A lightweight cross-platform engine written in C99 for creating text-based 
+RPGs and console quests. Supports Arch Linux and Windows (MinGW/CLion).
+
+QUICK START
+To start your project, include the header file:
+#include "KirNovEngine.h"
+
+CORE FUNCTIONS
+1. keng_init(str gamename)
+   Initializes the engine: sets UTF-8 encoding (for Windows compatibility) 
+   and the console window title.
+   Example: keng_init("Dark Dungeon");
+
+2. gamelog(str log, str color)
+   Prints a message with a [LOG] prefix and the specified color.
+   Example: gamelog("You entered the cave", C_YELLOW);
+
+3. menu(str title, Button* buttons, i32 count)
+   Creates an interactive menu. Waits for numerical input from the user.
+   Returns the actionID of the selected button.
+   Example:
+   Button b[] = { {"Left", 1}, {"Right", 2} };
+   i32 act = menu("CHOOSE PATH", b, 2);
+
+COLOR MACROS
+Used within the gamelog function:
+- C_RED: Red (Damage, hazards)
+- C_GREEN: Green (Success, healing)
+- C_YELLOW: Yellow (Descriptions, quests)
+- C_BLUE: Blue (System info)
+- C_RESET: Reset color (Default text)
+
+DATA TYPES
+- str: Alias for char* (strings)
+- i32: Alias for int (32-bit integers)
+- Button: Struct for menu buttons (label, actionID)
