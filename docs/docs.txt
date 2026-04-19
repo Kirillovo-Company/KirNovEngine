@@ -1,5 +1,5 @@
 KirNovEngine v1.0 - Documentation (EN)
-Developer: Kirillovo Company (Kirill Ludzyan)
+Developer: Kirillovo Company
 
 DESCRIPTION
 A lightweight cross-platform engine written in C99 for creating text-based 
