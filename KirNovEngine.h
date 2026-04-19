@@ -109,13 +109,13 @@ i32 menu(str title, Button* buttons, i32 count) {
             printf("%d. %s\n", i + 1, buttons[i].label);
         }
         printf("------------------\n");
-        printf(">> Выбор: ");
+        printf(">> Choise: ");
 
         // Защита от ввода букв вместо цифр
         if (scanf("%d", &choice) != 1) {
             while (getchar() != '\n');
             system(CLEAR_CMD);
-            printf(C_RED "Ошибка: вводи только цифры!\n" C_RESET);
+            printf(C_RED "Error: only numbers!\n" C_RESET);
             continue;
         }
 
@@ -123,7 +123,7 @@ i32 menu(str title, Button* buttons, i32 count) {
             return buttons[choice - 1].actionID;
         } else {
             system(CLEAR_CMD);
-            printf(C_YELLOW "Такого пункта нет!\n" C_RESET);
+            printf(C_YELLOW "Choise is not exist!\n" C_RESET);
         }
     }
 }
