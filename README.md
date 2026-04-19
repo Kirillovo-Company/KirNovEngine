@@ -1,5 +1,5 @@
-# KirNovEng
-### Движок для создания Консольных RPG Новел на C/Engine for console RPG novels on C
+# KirNovEngine
+### InWork Branch of KirNovEngine
 ## Описание(Ru)
 Движок написанный на C, он:
 Кросплатформенный
