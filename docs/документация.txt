@@ -1,6 +1,6 @@
 
 KirNovEngine v1.0 - Документация (RU)
-Разработчик: Kirillovo Company (Kirill Ludzyan)
+Разработчик: Kirillovo Company
 
 ОПИСАНИЕ
 Легковесный кроссплатформенный движок на языке C99 для создания текстовых RPG 
