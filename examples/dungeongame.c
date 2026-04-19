@@ -17,7 +17,7 @@ int main() {
             i32 act = menu("КОМНАТА", room_choice, 2);
 
             if (act == 101) {
-                gamelog("Тумбочка пуста.", C_RESET);
+                log("Тумбочка пуста.", C_RESET);
             } else if (act == 102) {
                 stage = 2;
             }
@@ -32,7 +32,7 @@ int main() {
             i32 act = menu("ДВЕРЬ", door_choice, 2);
 
             if (act == 201) {
-                gamelog("Свобода!", C_GREEN);
+                log("Свобода!", C_GREEN);
                 running = 0;
             } else if (act == 202) {
                 stage = 1;
