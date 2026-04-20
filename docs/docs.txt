@@ -1,40 +1,35 @@
-KirNovEngine v1.0 - Documentation (EN)
-Developer: Kirillovo Company
+==================================================
+        KirNovEngine v1.1 - Documentation
+==================================================
 
-DESCRIPTION
-A lightweight cross-platform engine written in C99 for creating text-based 
-RPGs and console quests. Supports Arch Linux and Windows (MinGW/CLion).
+KirNovEngine is a lightweight console engine for creating 
+text adventures and visual novels using the Lua language.
 
-QUICK START
-To start your project, include the header file:
-#include "KirNovEngine.h"
+--- CORE FUNCTIONS (API) ---
 
-CORE FUNCTIONS
-1. keng_init(str gamename)
-   Initializes the engine: sets UTF-8 encoding (for Windows compatibility) 
-   and the console window title.
-   Example: keng_init("Dark Dungeon");
+1. say(name, name_color, text, text_color, speed)
+   Displays a character's dialogue with a typewriter effect.
+   Example: say("Nikita", C_CYAN, "Hello world!", C_RESET, 50)
 
-2. gamelog(str log, str color)
-   Prints a message with a [LOG] prefix and the specified color.
-   Example: gamelog("You entered the cave", C_YELLOW);
+2. dialogue(text, color, speed)
+   Displays narrative text or thoughts without a character name.
+   Example: dialogue("Thunder roared in the sky...", C_YELLOW, 60)
 
-3. menu(str title, Button* buttons, i32 count)
-   Creates an interactive menu. Waits for numerical input from the user.
-   Returns the actionID of the selected button.
-   Example:
-   Button b[] = { {"Left", 1}, {"Right", 2} };
-   i32 act = menu("CHOOSE PATH", b, 2);
+3. menu(title, options_list)
+   Creates an interactive menu. Returns the ID of the choice (1, 2, 3...).
+   Example: local choice = menu("Where to go?", {"Forest", "City"})
 
-COLOR MACROS
-Used within the gamelog function:
-- C_RED: Red (Damage, hazards)
-- C_GREEN: Green (Success, healing)
-- C_YELLOW: Yellow (Descriptions, quests)
-- C_BLUE: Blue (System info)
-- C_RESET: Reset color (Default text)
+4. input(prompt)
+   Asks the player to type text. Returns the entered string.
+   Example: local name = input("Enter your name: ")
 
-DATA TYPES
-- str: Alias for char* (strings)
-- i32: Alias for int (32-bit integers)
-- Button: Struct for menu buttons (label, actionID)
+--- COLOR CONSTANTS ---
+Use these to color your text:
+C_RED, C_GREEN, C_YELLOW, C_BLUE, C_MAGENTA, C_CYAN, C_RESET
+
+--- HOW TO UPDATE THE GAME ---
+To change the story, simply edit the 'main.lua' file. 
+Recompiling the engine (KirNovEngine.exe) is not required 
+unless you change its internal C code.
+
+(c) 2026 KirNovEngine. Built with C and Lua.
