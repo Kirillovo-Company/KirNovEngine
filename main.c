@@ -25,7 +25,15 @@
 #define C_CYAN    "\x1b[36m"
 #define C_RESET   "\x1b[0m"
 
-#define ENG_VER     "1.1-release"
+#define RED     "\x1b[31m"
+#define GREEN   "\x1b[32m"
+#define YELLOW  "\x1b[33m"
+#define BLUE    "\x1b[34m"
+#define MAGENTA "\x1b[35m"
+#define CYAN    "\x1b[36m"
+#define RESET   "\x1b[0m"
+
+#define ENG_VER     "1.2-release"
 
 typedef char* str;
 typedef int i32;
@@ -155,6 +163,13 @@ void register_keng(lua_State *L) {
     lua_pushstring(L, C_BLUE);    lua_setglobal(L, "C_BLUE");
     lua_pushstring(L, C_CYAN);    lua_setglobal(L, "C_CYAN");
     lua_pushstring(L, C_RESET);   lua_setglobal(L, "C_RESET");
+
+	lua_pushstring(L, RED);     lua_setglobal(L, "RED");
+    lua_pushstring(L, GREEN);   lua_setglobal(L, "GREEN");
+    lua_pushstring(L, YELLOW);  lua_setglobal(L, "YELLOW");
+    lua_pushstring(L, BLUE);    lua_setglobal(L, "BLUE");
+    lua_pushstring(L, CYAN);    lua_setglobal(L, "CYAN");
+    lua_pushstring(L, RESET);   lua_setglobal(L, "RESET");
 }
 
 // --- MAIN (С поддержкой перетаскивания файлов) ---
